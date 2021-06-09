@@ -1,2 +1,2 @@
 #!/bin/bash
-cp -unt ./*.html ../*.html
+find . '*.html' -exec cp -u '{}' ".." ";"
