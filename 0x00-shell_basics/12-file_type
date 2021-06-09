@@ -1,2 +1,2 @@
-#!/bpin/bash
+#!/bin/bash
 file /tmp/iamafile
