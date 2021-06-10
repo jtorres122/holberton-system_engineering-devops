@@ -1,2 +1,2 @@
 #!/bin/bash
-find -d chmod -R 755
+chmod -R -rwXr-xr-x
