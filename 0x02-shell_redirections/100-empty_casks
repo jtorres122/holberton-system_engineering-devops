@@ -1,2 +1,2 @@
 #!/bin/bash
-find -maxdepth 3 -empty -printf "&f\n"
+find -maxdepth 3 -empty -printf "%f\n"
