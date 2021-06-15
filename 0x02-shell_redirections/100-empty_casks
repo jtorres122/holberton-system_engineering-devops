@@ -1,0 +1,2 @@
+#!/bin/bash
+find -maxdepth 3 -empty -printf "f%\n"
