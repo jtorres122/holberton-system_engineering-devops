@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# Bash script displays string indefinitely and displays when it receives a SIGTERM
+
+while :
+do
+  echo "To infinity and beyond"
+  trap "echo I am invincible!!!" SIGTERM
+  sleep 2
+done
