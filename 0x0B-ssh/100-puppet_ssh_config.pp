@@ -3,7 +3,7 @@ include stdlib
 
 file_line { 'BatchMode':
   ensure => 'present',
-  line   => 'BatchMode yes',
+  line   => 'PasswordAuthentication no',
   path   => '/etc/ssh/ssh_config',
 }
 
