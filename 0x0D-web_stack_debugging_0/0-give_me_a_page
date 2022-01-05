@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+# Bash script fixes error, successfully returning desired page
+
+sudo service apache2 restart
