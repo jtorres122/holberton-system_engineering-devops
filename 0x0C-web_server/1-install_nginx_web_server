@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+# Bash script installs nginx and sets up curl to return Hello World
+
+apt-get update
+apt-get -y install nginx
+echo "Hello World" >> /var/www/html/index.nginx-debian.html
+service nginx restart
