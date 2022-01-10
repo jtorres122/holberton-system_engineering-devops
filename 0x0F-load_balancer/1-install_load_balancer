@@ -1,0 +1,16 @@
+#!/usr/bin/env bash
+# Bash script configures haproxy loadbalancer
+
+apt-get -y update
+apt install -y haproxy
+sudo sed -i "$ aENABLED=1" /etc/init.d/haproxy
+echo "
+frontend load_balancer
+    bind *:80
+    mode http
+    default_backend webserver
+backend webserver
+    balance roundrobin
+    server 3211-web-01 34.75.52.195:80 check
+    server 3211-web-02 54.167.30.11:80 check" >> /etc/haproxy/haproxy.cfg
+service haproxy restart
