@@ -1,6 +1,0 @@
-#!/usr/bin/env bash
-# Bash script makes task 0 short and sweet
-
-ln -sf /etc/nginx/sites-available/default /etc/nginx/sites-enabled/default
-sudo service nginx start
-rm /run/nginx.pid
