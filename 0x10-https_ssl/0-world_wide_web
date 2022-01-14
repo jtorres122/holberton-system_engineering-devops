@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# Bash scripts displays information about subdomains
+
+answer() {
+    dig "$2.$1" | awk '/;; ANSWER SECTION/ {getline;
+    printf "The subdomain %s is a %s record and points to %s\n", S_D, $4, $5}' S_D="$2"
+}
+
+if [ $# -gt 1 ]
+then
+    answer "$1" "$2"
+else
+    answer "$1" "www"
+    answer "$1" "lib-01"
+    answer "$1" "web-01"
+    answer "$1" "web-02"
+fi
