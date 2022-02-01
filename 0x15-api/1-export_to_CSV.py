@@ -26,9 +26,12 @@ if __name__ == "__main__":
     todos = todos_request.text
     todos_data = json.loads(todos)
 
-    with open('USER_ID.csv', 'w') as f:
+    with open('{}.csv'.format(employee_ID), 'w') as f:
         for todo in todos_data:
             for user in users_data:
-                if user['id'] == employee_ID and todo['userId'] == employee_ID:
-                    f.write('"{}","{}","{}","{}"\n'.format(employee_ID, user['name'],
-                                            todo['completed'], todo['title']))
+                if user['id'] == employee_ID and\
+                  todo['userId'] == employee_ID:
+                    f.write('"{}","{}","{}","{}"\n'.format(employee_ID,
+                                                           user['name'],
+                                                           todo['completed'],
+                                                           todo['title']))
