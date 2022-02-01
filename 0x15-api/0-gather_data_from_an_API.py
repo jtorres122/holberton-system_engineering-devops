@@ -1,8 +1,11 @@
 #!/usr/bin/python3
-'''Module gathers data from an API'''
-from dataclasses import dataclass
-from unicodedata import name
-from requests import get    
+'''
+Module gathers data from a REST API, for a given employee ID, and
+returns information about his/her list progress
+'''
+
+
+from requests import get
 import json
 from sys import argv
 
