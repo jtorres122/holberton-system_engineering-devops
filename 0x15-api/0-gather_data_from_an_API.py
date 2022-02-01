@@ -4,9 +4,8 @@ Module gathers data from a REST API, for a given employee ID, and
 returns information about his/her list progress
 '''
 
-
-from requests import get
 import json
+from requests import get
 from sys import argv
 
 if __name__ == "__main__":
