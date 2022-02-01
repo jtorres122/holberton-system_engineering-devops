@@ -32,6 +32,6 @@ if __name__ == "__main__":
                 if user['id'] == employee_ID and\
                   todo['userId'] == employee_ID:
                     f.write('"{}","{}","{}","{}"\n'.format(employee_ID,
-                                                           user['name'],
+                                                           user['username'],
                                                            todo['completed'],
                                                            todo['title']))
