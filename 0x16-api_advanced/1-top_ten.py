@@ -1,7 +1,7 @@
 #!/usr/bin/python3
 '''
 Function that queries the Reddit API and returns
-the total # of subscribers for a given subreddit
+the top 10 posts for a given subreddit
 '''
 import json
 import requests
